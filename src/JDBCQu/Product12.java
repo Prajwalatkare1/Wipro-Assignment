@@ -1,0 +1,58 @@
+package JDBCQu;
+
+import java.time.LocalDate;
+import java.util.List;
+
+public class Product12 {
+    private Long id;
+    private String status;
+    private LocalDate orderDate;
+    private LocalDate deliveryDate;
+    private List<Product> products;
+    private Customer customer;
+
+    // Constructor
+    public Product12(Long id, String status, LocalDate orderDate, LocalDate deliveryDate, List<Product> products, Customer customer) {
+        this.id = id;
+        this.status = status;
+        this.orderDate = orderDate;
+        this.deliveryDate = deliveryDate;
+        this.products = products;
+        this.customer = customer;
+    }
+
+    // Getters
+    public Long getId() {
+        return id;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public LocalDate getOrderDate() {
+        return orderDate;
+    }
+
+    public LocalDate getDeliveryDate() {
+        return deliveryDate;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    // toString method
+    @Override
+    public String toString() {
+        return "Order{id=" + id +
+               ", status='" + status + '\'' +
+               ", orderDate=" + orderDate +
+               ", deliveryDate=" + deliveryDate +
+               ", customer=" + customer.getName() + "}";
+    }
+}
