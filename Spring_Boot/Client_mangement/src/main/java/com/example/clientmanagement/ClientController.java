@@ -1,4 +1,4 @@
-package com.example.clientmanagement;
+package com.example.Client_management;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
