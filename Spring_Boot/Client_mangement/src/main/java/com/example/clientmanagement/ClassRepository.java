@@ -1,4 +1,4 @@
-package com.example.clientmanagement;
+package com.example.Client_management;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
