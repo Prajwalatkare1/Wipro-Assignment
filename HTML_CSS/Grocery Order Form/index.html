@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grocery Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        form {
+            width: 400px;
+            margin: 50px auto;   /* this puts it in center */
+            padding: 20px;
+            border: 2px solid black;
+            background-color: white;
+        }
+        h2 {
+            text-align: center;
+        }
+        fieldset {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Online Grocery Order</h2>
+
+    <form action="order.php" method="POST">
+
+        <fieldset>
+            <legend>Customer Details</legend>
+
+            <label>Full Name:</label>
+            <input type="text" name="fullname" placeholder="Enter Full Name" required autofocus><br><br>
+
+            <label>Email:</label>
+            <input type="email" name="email" required><br><br>
+
+            <label>Mobile Number:</label>
+            <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="10 digit number" required><br><br>
+
+            <label>Delivery Address:</label><br>
+            <textarea name="address" rows="3" cols="30" required></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Order Details</legend>
+
+            <label>Grocery Items:</label><br>
+            <input type="checkbox" name="items[]" value="Rice">Rice<br>
+            <input type="checkbox" name="items[]" value="Milk">Milk<br>
+            <input type="checkbox" name="items[]" value="Bread">Bread<br>
+            <input type="checkbox" name="items[]" value="Eggs">Eggs<br>
+            <input type="checkbox" name="items[]" value="Sugar">Sugar<br><br>
+
+            <label>Quantity:</label>
+            <input type="number" name="quantity" min="1" max="10"><br><br>
+
+            <label>Delivery Date:</label>
+            <input type="date" name="deliverydate" required><br><br>
+
+            <label>Preferred Time:</label>
+            <input type="time" name="deliverytime"><br><br>
+
+            <label>Payment Method:</label><br>
+            <input type="radio" name="payment" value="cod" required>Cash on Delivery<br>
+            <input type="radio" name="payment" value="upi">UPI<br>
+            <input type="radio" name="payment" value="card">Card<br><br>
+        </fieldset>
+
+        <label>Special Instructions:</label><br>
+        <textarea name="instructions" rows="3" cols="30"></textarea><br><br>
+
+        <input type="checkbox" name="confirm" required>I confirm my order<br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,160 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f8fff5; /* light greenish background */
+}
+
+#topbar{
+    background:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    padding:10px;
+    position:fixed;
+    width:100%;
+    top:0;
+    box-shadow:0px 2px 6px rgba(0,0,0,0.1);
+}
+
+#shopname h1{
+    color:#ff7b00; /* orange */
+}
+#shopname p{
+    font-size:12px;
+    color:gray;
+}
+
+#menu ul{
+    list-style:none;
+    display:flex;
+    padding:0;
+}
+
+#menu ul li{
+    margin:0 8px;
+}
+
+#menu ul li a{
+    text-decoration:none;
+    background:#2b9348; /* green */
+    color:white;
+    padding:5px 10px;
+    border-radius:4px;
+}
+
+#menu ul li a:hover{
+    background:#207239; /* darker green */
+}
+
+.bigbanner{
+    margin-top:70px;
+    background:url('banner.jpg');
+    height:250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.bannerbox{
+    background:rgba(0,0,0,0.5);
+    padding:20px;
+    color:white;
+    border-radius:6px;
+}
+
+.clickbtn{
+    background:#ff7b00; /* orange button */
+    color:white;
+    padding:5px 15px;
+    text-decoration:none;
+    border-radius:4px;
+}
+
+.itemlist{
+    padding:20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.cardbox{
+    background:white;
+    padding:10px;
+    text-align:center;
+    border:1px solid #ddd;
+    border-radius:6px;
+    box-shadow:0px 2px 4px rgba(0,0,0,0.05);
+}
+
+.cardbox img{
+    width:100%;
+    height:auto;
+}
+
+.rs{
+    font-weight:bold;
+    color:#2b9348;
+}
+
+button{
+    background:#2b9348;
+    color:white;
+    border:none;
+    padding:6px 12px;
+    border-radius:4px;
+}
+
+button:hover{
+    background:#207239;
+}
+
+.specialarea{
+    background:#fff2e0;
+    padding:10px;
+    text-align:center;
+}
+
+.reviewpart{
+    padding:20px;
+}
+
+.rvw{
+    background:white;
+    margin:10px 0;
+    padding:10px;
+    border-radius:6px;
+}
+
+#foot{
+    background:#2b9348;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+
+.cardbox img{
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 6px;
+}
+
+.specialarea img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+
+.bigbanner{
+    margin-top:70px;
+    background:url('banner.jpg') center/cover no-repeat;
+    height: 300px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}

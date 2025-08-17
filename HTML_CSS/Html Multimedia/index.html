@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Multimedia Lab</title>
+</head>
+<body style="font-family: Arial; margin: 20px;">
+
+    <h2>HTML5 Multimedia Lab</h2>
+    <p>This page demonstrates video, audio, embed (PDF), iframe, and inline SVG.</p>
+
+
+    <h3>Video (sample.mp4)</h3>
+    <video width="400" height="250" controls poster="poster.jpg">
+        <source src="sample.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    
+    <h3>Audio (sample.mp3)</h3>
+    <audio controls loop>
+        <source src="sample.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+ 
+    <h3>Embed (document.pdf)</h3>
+    <embed src="document.pdf" type="application/pdf" width="400" height="300">
+    <p>If not visible, <a href="document.pdf">download document.pdf</a></p>
+
+  
+    <h3>Iframe (demo.html)</h3>
+    <iframe src="demo.html" width="400" height="200"></iframe>
+
+   
+    <h3>Inline SVG</h3>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="3" fill="lightblue"></circle>
+    </svg>
+
+</body>
+</html>

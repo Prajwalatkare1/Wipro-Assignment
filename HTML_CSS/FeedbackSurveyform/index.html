@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Feedback Survey</title>
+    <link rel="stylesheet" href="style.css"> <!-- external CSS -->
+</head>
+<body>
+
+    <header>
+        <h1>Website Feedback Survey</h1>
+        <p>We value your opinion. Please take a minute to share your thoughts.</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <form action="survey.php" method="POST">
+
+            <section>
+                <h2>Personal Information</h2>
+                <label>Full Name:</label>
+                <input type="text" name="fullname" required><br><br>
+
+                <label>Email Address:</label>
+                <input type="email" name="email" required><br><br>
+
+                <label>Age:</label>
+                <input type="number" name="age" min="10" max="100"><br><br>
+            </section>
+
+            <section>
+                <h2>Website Rating</h2>
+                <label>Design (1-10):</label>
+                <input type="range" name="design" min="1" max="10"><br><br>
+
+                <label>Content Quality:</label><br>
+                <input type="radio" name="content" value="Excellent"> Excellent
+                <input type="radio" name="content" value="Good"> Good
+                <input type="radio" name="content" value="Average"> Average
+                <input type="radio" name="content" value="Poor"> Poor <br><br>
+
+                <label>Most visited page:</label>
+                <select name="page">
+                    <option value="Home">Home</option>
+                    <option value="Blog">Blog</option>
+                    <option value="Products">Products</option>
+                    <option value="Contact">Contact</option>
+                </select><br><br>
+            </section>
+
+            <section>
+                <h2>Suggestions</h2>
+                <textarea name="suggestions" rows="4" cols="40" placeholder="Write your suggestions here..."></textarea><br><br>
+                <input type="checkbox" name="contactok"> I agree to be contacted regarding my feedback<br><br>
+            </section>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+
+        </form>
+
+        <aside>
+            <h3>Why your feedback matters</h3>
+            <p>Your feedback helps us improve our website experience for everyone. Thank you!</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>© 2025 Website Survey</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conference Form</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<h1>ONLINE CONFERENCE REGISTRATION FORM</h1>
+
+<form action="#" method="post" enctype="multipart/form-data">
+
+    <div class="form-section">
+        <h2>Personal Information</h2>
+        <table>
+            <tr>
+                <td><span class="required">Full Name</span></td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td><span class="required">Email</span></td>
+                <td><input type="text" name="email"></td>
+            </tr>
+            <tr>
+                <td><span class="required">Gender</span></td>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td><span class="required">Country</span></td>
+                <td>
+                    <select name="country">
+                        <option value="">Select Country</option>
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                        <option>Canada</option>
+                        <option>Australia</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Profile Photo</td>
+                <td><input type="file" name="photo"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="form-section">
+        <h2>Account Preferences</h2>
+        <table>
+            <tr>
+                <td><span class="required">Username</span></td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td><span class="required">Password</span></td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td><span class="required">Confirm Password</span></td>
+                <td><input type="password" name="confirm_password"></td>
+            </tr>
+            <tr>
+                <td>Interests</td>
+                <td>
+                    <input type="checkbox" name="interest" value="web"> Web Development<br>
+                    <input type="checkbox" name="interest" value="ai"> AI<br>
+                    <input type="checkbox" name="interest" value="cloud"> Cloud
+                </td>
+            </tr>
+            <tr>
+                <td>Contact Method</td>
+                <td>
+                    <select name="contact_method">
+                        <option>Email</option>
+                        <option>Phone</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Special Requirements</td>
+                <td><textarea name="comments" rows="3"></textarea></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="form-section">
+        <h2>Payment Details</h2>
+        <table>
+            <tr>
+                <td><span class="required">Payment Method</span></td>
+                <td>
+                    <select name="payment">
+                        <option value="">Select Method</option>
+                        <option>Credit Card</option>
+                        <option>Debit Card</option>
+                        <option>PayPal</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="required">Card Number</span></td>
+                <td><input type="text" name="card_number"></td>
+            </tr>
+            <tr>
+                <td><span class="required">Expiry Date</span></td>
+                <td>
+                    <select name="exp_month">
+                        <option>Month</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <!-- More months -->
+                    </select>
+                    <select name="exp_year">
+                        <option>Year</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <!-- More years -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="required">CVV</span></td>
+                <td><input type="password" name="cvv" maxlength="3" size="3"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" name="terms"> I agree to Terms & Conditions
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="form-buttons">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </div>
+
+</form>
+
+</body>
+</html>
