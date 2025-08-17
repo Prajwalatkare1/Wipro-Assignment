@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Income Tax Calculator | India</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Income Tax Calculator</h1>
+      <p class="subtitle">FY 2023-24 (AY 2024-25) - New Tax Regime</p>
+    </header>
+
+    <main>
+      <form id="taxForm" novalidate>
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" required>
+          <div class="error-message" id="nameError"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="panNumber">PAN Number</label>
+          <input type="text" id="panNumber" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" maxlength="10" required>
+          <div class="error-message" id="panError"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" required>
+          <div class="error-message" id="dobError"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="income">Annual Income (₹)</label>
+          <input type="number" id="income" min="0" step="1000" required>
+          <div class="error-message" id="incomeError"></div>
+        </div>
+
+        <button type="submit" class="btn-calculate">Calculate Tax</button>
+      </form>
+
+      <div id="output" class="result-card" hidden>
+        <h2>Tax Calculation Summary</h2>
+        <div class="result-grid">
+          <div class="result-item">
+            <span>Name:</span>
+            <span id="resultName"></span>
+          </div>
+          <div class="result-item">
+            <span>PAN:</span>
+            <span id="resultPan"></span>
+          </div>
+          <div class="result-item">
+            <span>Age:</span>
+            <span id="resultAge"></span>
+          </div>
+          <div class="result-item">
+            <span>Income:</span>
+            <span id="resultIncome"></span>
+          </div>
+          <div class="result-item highlight">
+            <span>Tax Payable:</span>
+            <span id="resultTax"></span>
+          </div>
+          <div class="result-item">
+            <span>Effective Tax Rate:</span>
+            <span id="resultRate"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Note: This calculator uses the new tax regime rates. Always consult a CA for official tax filing.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

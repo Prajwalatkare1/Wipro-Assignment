@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Equality Checker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>JavaScript Equality & Type Comparison</h1>
+    
+    <div class="input-group">
+      <label for="value1">First Value:</label>
+      <input type="text" id="value1" placeholder="e.g., 5, 'hello', true">
+      <div class="type-display" id="type1"></div>
+    </div>
+    
+    <div class="input-group">
+      <label for="value2">Second Value:</label>
+      <input type="text" id="value2" placeholder="e.g., '5', false, 10">
+      <div class="type-display" id="type2"></div>
+    </div>
+    
+    <button id="checkButton">Compare Values</button>
+    
+    <div class="results" id="results">
+      <h2>Comparison Results</h2>
+      <div class="result-grid" id="resultsContainer"></div>
+      
+      <div class="examples">
+        <h3>Common Examples</h3>
+        <ul>
+          <li><code>5 == '5'</code> → <span class="true">true</span> (type coercion)</li>
+          <li><code>5 === '5'</code> → <span class="false">false</span> (different types)</li>
+          <li><code>0 == false</code> → <span class="true">true</span> (coercion)</li>
+          <li><code>0 === false</code> → <span class="false">false</span> (different types)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

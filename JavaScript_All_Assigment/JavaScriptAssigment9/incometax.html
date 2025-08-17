@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Income Tax Calculator with Multiple Callbacks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Income Tax Calculator with Multiple Callbacks</h2>
+  <button onclick="startTaxProcess()">Start Tax Calculation</button>
+
+  <div id="output">
+    <h3>Results:</h3>
+    <div id="result"></div>
+    
+  </div>
+
+  <script>
+    // JSON Array to store tax records
+    const taxRecords = [];
+
+    // Tax calculation function with callback
+    function calculateTax(name, pan, annualIncome, callback) {
+      let tax = 0;
+
+      // Simple slab system example
+      if (annualIncome <= 250000) {
+        tax = 0;
+      } else if (annualIncome <= 500000) {
+        tax = (annualIncome - 250000) * 0.05;
+      } else if (annualIncome <= 1000000) {
+        tax = (250000 * 0.05) + (annualIncome - 500000) * 0.2;
+      } else {
+        tax = (250000 * 0.05) + (500000 * 0.2) + (annualIncome - 1000000) * 0.3;
+      }
+
+      callback(name, pan, annualIncome, tax);
+    }
+
+    // Callback 1 → Log to Console
+    function logToConsole(name, pan, income, tax) {
+      console.log(`Name: ${name}`);
+      console.log(`PAN: ${pan}`);
+      console.log(`Annual Income: ₹${income}`);
+      console.log(`Tax Payable: ₹${tax}`);
+    }
+
+    // Callback 2 → Display on Web Page
+    function displayOnPage(name, pan, income, tax) {
+      document.getElementById("result").innerHTML = `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>PAN:</strong> ${pan}</p>
+        <p><strong>Annual Income:</strong> ₹${income}</p>
+        <p><strong>Tax Payable:</strong> ₹${tax}</p>
+      `;
+    }
+
+    // Callback 3 → Save to JSON Array
+    function saveToRecords(name, pan, income, tax) {
+      taxRecords.push({ name, pan, income, tax });
+      document.getElementById("records").textContent = JSON.stringify(taxRecords, null, 2);
+    }
+
+    // Sequential execution function
+    function startTaxProcess() {
+      const name = prompt("Enter your Name:");
+      const pan = prompt("Enter your PAN:");
+      const income = parseFloat(prompt("Enter your Annual Income:"));
+
+      // First calculate tax
+      calculateTax(name, pan, income, function(n, p, i, t) {
+        // Then execute multiple callbacks sequentially
+        logToConsole(n, p, i, t);
+        displayOnPage(n, p, i, t);
+        saveToRecords(n, p, i, t);
+      });
+    }
+  </script>
+</body>
+</html>
